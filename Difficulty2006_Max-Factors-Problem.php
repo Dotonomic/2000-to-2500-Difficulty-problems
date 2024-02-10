@@ -64,7 +64,7 @@ for ($j=0;$pow<=$N;$j++) {
         
     $K = Primes[$j];
         
-    while ($N % $pow == 0) { //Increment $max until it exceeds by 1 the exponent of the current prime in the prime factorization on N.
+    while ($N % $pow == 0) { //Increment $max until it exceeds by 1 the exponent of the current prime in the prime factorization of N.
         $pow *= $K;  
                 
         $max++;
