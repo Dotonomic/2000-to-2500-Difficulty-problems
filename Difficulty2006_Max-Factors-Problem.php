@@ -1,3 +1,6 @@
+https://www.codechef.com/viewsolution/1044441898
+
+
 <?php
 
 define('Max',1000000000);
