@@ -64,6 +64,6 @@ for ($j=0;$pow<=$N;$j++) {
         break;
 }
         
-echo 'The smallest whole number K such that '.Ncopy.'/K has as many divisors as possible is: '.$sol;
+echo $sol.' is the smallest divisor of '.Ncopy.' greater than 1 such that '.Ncopy.' divided by it has as many divisors as possible.';
 
 ?>
