@@ -1,7 +1,13 @@
-https://www.codechef.com/viewsolution/1044441898
+PROBLEM:
+Find the smallest divisor of N greater than 1 such that N divided by it has as many divisors as possible.
+
+SOLUTION:
+The smallest prime factor with maximum exponent in the prime factorization of N.
 
 
 <?php
+
+//Construct an array containing the prime numbers up to the square root of the upper limit for N.
 
 define('Max',1000000000);
 
@@ -31,6 +37,9 @@ while ($candidate <= Sqrt) {
 
 define('Primes',$primes);
 
+
+//Read N
+
 $N = 0;
 
 while ($N < 2 || $N > Max)
@@ -38,7 +47,8 @@ while ($N < 2 || $N > Max)
 
 define('Ncopy',$N);
 
-$sol = Ncopy;
+
+$sol = Ncopy; //The default solution is N itself, for when N is a prime number greater than the square root of the upper limit.
     
 $max = 1;
         
@@ -49,7 +59,7 @@ for ($j=0;$pow<=$N;$j++) {
         
     $K = Primes[$j];
         
-    while ($N % $pow == 0) {
+    while ($N % $pow == 0) { //Increment $max until it exceeds by 1 the exponent of the current prime in the prime factorization on N.
         $pow *= $K;  
                 
         $max++;
@@ -61,7 +71,7 @@ for ($j=0;$pow<=$N;$j++) {
         $sol = $K;
     }
             
-    if (isset(Primes[$j+1]))
+    if (isset(Primes[$j+1])) //If we haven't exhausted our known Primes, set the next prime power to be checked to: the next prime to the power of $max, since we can ignore exponents smaller than that.
         $pow = pow(Primes[$j+1],$max);
     else
         break;
