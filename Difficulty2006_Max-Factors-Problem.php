@@ -31,7 +31,7 @@ define('Primes',$primes);
 $N = 0;
 
 while ($N < 2 || $N > Max)
-	$N = readline('Enter a whole number between 2 and '.Max.': ');
+    $N = readline('Enter a whole number between 2 and '.Max.': ');
 
 define('Ncopy',$N);
 
