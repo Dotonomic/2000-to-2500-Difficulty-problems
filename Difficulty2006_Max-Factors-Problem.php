@@ -1,8 +1,13 @@
 PROBLEM:
 Find the smallest divisor of N greater than 1 such that N divided by it has as many divisors as possible.
 
+https://www.codechef.com/practice/course/5-star-and-above-problems/DIFF2500/problems/MXFACS
+
+
 SOLUTION:
 The smallest prime factor with maximum exponent in the prime factorization of N.
+
+https://www.codechef.com/viewsolution/1044441898
 
 
 <?php
