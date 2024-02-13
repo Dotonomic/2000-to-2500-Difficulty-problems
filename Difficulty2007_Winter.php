@@ -1,7 +1,10 @@
+https://www.codechef.com/practice/course/5-star-and-above-problems/DIFF2500/problems/ELWINTER
+
+
 You are given a connected graph with N nodes and M edges. You are given Q queries of the following types:
 1: Given node u, set the state of u to frozen.
 2: Given t, let t units of time pass by.
-3: Given node u, answer if node u is currently frozen.
+3: Given node u, answer wether node u is currently frozen.
 
 Initially, no node is frozen.
 If, at time T, a node u is frozen, then, at time T+1, all neighbours of u become frozen.
