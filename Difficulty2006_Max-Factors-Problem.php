@@ -12,7 +12,7 @@ https://www.codechef.com/viewsolution/1044441898
 
 <?php
 
-//Construct an array containing the prime numbers up to the square root of the upper limit for N.
+// Construct an array containing the prime numbers up to the square root of the upper limit for N.
 
 define('Max',1000000000);
 
@@ -43,7 +43,7 @@ while ($candidate <= Sqrt) {
 define('Primes',$primes);
 
 
-//Read N
+// Read N
 
 $N = 0;
 
@@ -76,8 +76,8 @@ for ($j=0;$pow<=$N;$j++) {
         $sol = $K;
     }
             
-    if (isset(Primes[$j+1])) //If we haven't exhausted our known Primes, set the next prime power to be checked to: the next prime to the power of $max, since we can ignore exponents smaller than that.
-        $pow = pow(Primes[$j+1],$max);
+    if (isset(Primes[$j+1])) //If we haven't exhausted our known Primes
+        $pow = pow(Primes[$j+1],$max); //set the next prime power to be checked to: the next prime to the power of $max, since we can ignore exponents smaller than that.
     else
         break;
 }
