@@ -24,7 +24,11 @@ define('M',NMQ[1]);
 
 define('Q',NMQ[2]);
 
-for ($i=0;$i<M;$i++) {
+
+// Store the graph as an array with each node as a key and the value for that key an array with that node's neighbours as values.
+
+// To construct the graph: for each edge {$edge[0],$edge[1]}, add the node $edge[1] to $graph[$edge[0]] and vice versa.
+for ($i=0;$i<M;$i++) { 
     $edge = explode(' ',readline());
 
     $graph[$edge[0]][] = $edge[1];
@@ -44,20 +48,21 @@ for ($i=0;$i<Q;$i++) {
     switch ($type) {
         case 1 :
             if (!isset($frozen[$argument])) {
-                $frozen[$argument] = 0;
-                            
-                $toProcess[] = $argument;
+                $frozen[$argument] = 0; //Use an array to keep track of all frozen nodes and
+                
+                $toProcess[] = $argument; //another one to store the ones that have been frozen since the last unit of time passed.
             }
             
             break;
             
-        case 2 :
-            for ($j=0;$j<$argument&isset($toProcess);$j++) {
+        case 2 : 
+            for ($j=0;$j<$argument&isset($toProcess);$j++) { //For each unit of time that passes
                 $freeze = $toProcess;
-                
-                unset($toProcess);
-                
-                foreach ($freeze as $node) {
+                                                            
+                unset($toProcess); //unset $toProcess after making a copy and
+
+                foreach ($freeze as $node) { //for each node in it
+                    // freeze each neighbour that isn't frozen.
                     foreach (Graph[$node] as $node)
                         if (!isset($frozen[$node])) {
                             $frozen[$node] = 0;
