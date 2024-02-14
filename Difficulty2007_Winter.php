@@ -7,7 +7,7 @@ You are given a connected graph with N nodes and M edges. You are given Q querie
 3: Given node u, answer wether node u is currently frozen.
 
 Initially, no node is frozen.
-If, at time T, a node u is frozen, then, at time T+1, all neighbours of u become frozen.
+If at time T a node is frozen, then at time T+1 all its neighbours become frozen.
 
 The first line of input contains three integers: N, M, and Q.
 M lines follow, each containing two positive integers u and v, representing there is an edge between nodes u and v.
